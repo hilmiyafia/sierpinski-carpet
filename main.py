@@ -1,7 +1,6 @@
 import numpy
 import cv2
 
-
 def RemoveSquare(image, step=1, start=(0, 0), stop=None):
     if stop is None:
         stop = image.shape
@@ -16,12 +15,10 @@ def RemoveSquare(image, step=1, start=(0, 0), stop=None):
                 image = RemoveSquare(image, step - 1, (x, y), (x + size, y + size))
     return image
 
-
 def CreateCarpet(steps, pixel_size=1):
     size = pixel_size * (3 ** steps)
     carpet = numpy.ones((size, size))
     return RemoveSquare(carpet, steps)
-
 
 if __name__ == "__main__":
     carpet = CreateCarpet(5, 1)
