@@ -3,5 +3,5 @@ This repository contains a python code to generate Sierpiński carpet of given s
 
 ## Example
 <p align="center">
-  <img src="carpet.jpg">
+  <img src="carpet.png">
 </p>
